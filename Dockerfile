@@ -18,5 +18,10 @@ COPY --from=build /app/out .
 # Esponi la porta 80
 EXPOSE 80
 
-# Comando per avviare l'app
-ENTRYPOINT ["dotnet", "Hackathon-Bologna.dll"]
+# Abilita log dettagliati
+ENV DOTNET_HOST_PATH=/usr/share/dotnet/dotnet
+ENV DOTNET_CLI_TELEMETRY_OPTOUT=true
+ENV DOTNET_LOG_LEVEL=debug
+
+# Comando per avviare l'app con log dettagliati
+ENTRYPOINT ["dotnet", "Hackathon_Bologna.dll", "--urls", "http://0.0.0.0:80"]
