@@ -1,68 +1,60 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+<!DOCTYPE html>
+<html lang="it">
 <head>
-    <link href="~/css/site.css" rel="stylesheet" />
-    <link href="~/css/index.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <!-- Percorsi CSS aggiornati -->
+    <link href="css/site.css" rel="stylesheet" />
+    <link href="css/index.css" rel="stylesheet" />
 </head>
-
 <body class="index-page">
 
 <div class="hero">
     <video autoplay muted loop playsinline class="hero-video">
-            <source src="/img/WhatsAppVideo2026-02-08at10.52.37.mp4" type="video/mp4">
+        <source src="img/WhatsAppVideo2026-02-08at10.52.37.mp4" type="video/mp4">
     </video>
     <div class="hero-content">
         <h1>Benvenuto</h1>
     </div>
 </div>
 
-
 <div class="container-card">
 
-        <a href="@Url.Action("team", "Home")">
-            <div class="card">
-                <div class="card-title">TEAM</div>
-                <div class="card-desc">
-                    Siamo un team affiatato che unisce competenze diverse con naturalezza.<br>
-                    La nostra curiosità ci spinge a sperimentare, imparare e migliorare continuamente.<br>
-                    Affrontiamo ogni sfida con energia, collaborazione e voglia di creare qualcosa di nuovo.
-                </div>
+    <a href="team.html">
+        <div class="card">
+            <div class="card-title">TEAM</div>
+            <div class="card-desc">
+                Siamo un team affiatato che unisce competenze diverse con naturalezza.<br>
+                La nostra curiosità ci spinge a sperimentare, imparare e migliorare continuamente.<br>
+                Affrontiamo ogni sfida con energia, collaborazione e voglia di creare qualcosa di nuovo.
             </div>
-        </a>
+        </div>
+    </a>
 
-        <a href="@Url.Action("progetti", "Home")" class="card-link">
-            <div class="card">
-                <div class="card-title">April’s Fool Hackathon</div>
-                <div class="card-desc">
-                    April’s Fool Hackathon è una sfida creativa in cui i partecipanti devono sviluppare un gioco o un’esperienza digitale a tema scherzo.<br>
-                    L’obiettivo è sorprendere la giuria con soluzioni originali, intelligenti e tecnicamente curate.<br>
-                    Il progetto più creativo e capace di stupire verrà proclamato vincitore.
-                </div>
-                <div class="card-img">
-                    <img src="/img/progtto1.png">
-                </div>
+    <a href="progetti.html" class="card-link">
+        <div class="card">
+            <div class="card-title">April’s Fool Hackathon</div>
+            <div class="card-desc">
+                April’s Fool Hackathon è una sfida creativa in cui i partecipanti devono sviluppare un gioco o un’esperienza digitale a tema scherzo.<br>
+                L’obiettivo è sorprendere la giuria con soluzioni originali, intelligenti e tecnicamente curate.<br>
+                Il progetto più creativo e capace di stupire verrà proclamato vincitore.
             </div>
-        </a>
-
-        <a href="@Url.Action("contatti", "Home")">
-            <div class="card">
-                <div class="card-title">Contattaci</div>
-                <div class="card-desc">
-                    Qualunque problema dovessi riscontrare non esitare a contattarci, il nostro team è qui per voi!
-                </div>
+            <div class="card-img">
+                <img src="img/progtto1.png" alt="April’s Fool Hackathon">
             </div>
-        </a>
+        </div>
+    </a>
 
+    <a href="contatti.html">
+        <div class="card">
+            <div class="card-title">Contattaci</div>
+            <div class="card-desc">
+                Qualunque problema dovessi riscontrare non esitare a contattarci, il nostro team è qui per voi!
+            </div>
+        </div>
+    </a>
 
 </div>
 
 </body>
-
-
-
-
-
-
-
-
+</html>
