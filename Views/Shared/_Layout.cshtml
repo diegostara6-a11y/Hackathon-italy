@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600&family=Orbitron:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <button class="hamburger hamburger-classic" aria-label="Menu">
+            <span class="shorter"></span>
+            <span></span>
+            <span class="shorter"></span>
+        </button>
+
+        <img src="/img/logo.png" />
+
+        <a href="@Url.Action("Index", "Home")" class="btn-home">
+            <i class="fas fa-home"></i>
+        </a>
+    </header>
+
+    <!-- SIDEMENU -->
+    <aside class="sidemenu">
+        <a href="@Url.Action("Contatti", "Home")" class="btn-contatti" data-label="Contatti">
+            <i class="fas fa-phone"></i>
+        </a>
+        <a href="@Url.Action("team", "Home")" class="btn-team" data-label="Team">
+            <i class="fas fa-users"></i>
+        </a>
+        <a href="@Url.Action("progetti", "Home")" class="btn-progetti" data-label="Progetti">
+            <i class="fas fa-puzzle-piece"></i>
+        </a>
+        <a href="@Url.Action("faq", "Home")" class="btn-faq" data-label="FAQ">
+            <i class="fas fa-question-circle"></i>
+        </a>
+        <a href="@Url.Action("feedback", "Home")" class="btn-feedback" data-label="Feedback">
+            <i class="fas fa-star"></i>
+        </a>
+    </aside>
+
+    <!-- CONTENUTO PAGINA -->
+    <main>
+        @RenderBody()
+    </main>
+
+    <!-- SEPARATORE -->
+    <div style="display:flex;align-items:center;margin: 0 50px;">
+        <div style="flex:1;border-bottom:3px solid #000;border-radius: 10px;"></div>
+        <span style="margin:0 15px; font-size: 24px;">INFORMAZIONI</span>
+        <div style="flex:1;border-bottom:3px solid #000;border-radius: 10px;"></div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="colonna colonna-1">
+            <a href="@Url.Action("Contatti", "Home")" class="btntext"><h3>TELEFONO</h3></a>
+            <a href="@Url.Action("Contatti", "Home")" class="btntext"><h3>MAIL</h3></a>
+            <a href="@Url.Action("Contatti", "Home")" class="btntext"><h3>SOCIAL</h3></a>
+        </div>
+
+        <div class="colonna colonna-2">
+            <img src="/img/logoneroscritta.png" class="corniceLogo" />
+        </div>
+
+        <div class="colonna colonna-3">
+            <a href="@Url.Action("feedback", "Home")" class="btntext"><h3>DICCI LA TUA</h3></a>
+            <a href="@Url.Action("progetti", "Home")" class="btntext"><h3>PROGETTI</h3></a>
+
+            <!-- QUESTO apre il popup -->
+            <a href="#" class="btntext open-collab"><h3>COLLABORAZIONI</h3></a>
+        </div>
+    </footer>
+
+    <!-- OVERLAY MENU -->
+    <div id="overlay"></div>
+
+    <!-- POPUP COLLABORAZIONI -->
+    <div id="popup-overlay" class="overlay">
+        <div class="popup">
+            <h2>Richiesta di Collaborazione</h2>
+
+            <form asp-controller="Home" asp-action="InviaMessaggio" method="post">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="Nome" required placeholder="Il tuo nome">
+
+                <label for="cognome">Cognome</label>
+                <input type="text" id="cognome" name="Cognome" required placeholder="Il tuo cognome">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="Email" required placeholder="La tua email di contatto">
+
+                <label for="Azienda">Azienda / Ente</label>
+                <input type="text" id="team" name="Team" required placeholder="Nome dell'azienda o organizzazione">
+
+                <label for="Tipo di sponsor">Tipo di collaborazione</label>
+                <input type="text" id="progetto" name="Progetto" required placeholder="Es. supporto economico, materiali, servizi...">
+
+                <label for="prop collaborazione">Proposta di collaborazione</label>
+                <textarea id="necessità" name="necessità" rows="5" required placeholder="Descrivi la tua proposta"></textarea>
+
+                <button type="submit" class="btnsponsor">Invia</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- SCRIPT POPUP -->
+    <script>
+        const popupOverlay = document.getElementById('popup-overlay');
+
+        document.addEventListener('click', function (e) {
+            if (e.target.closest('.open-collab')) {
+                e.preventDefault();
+                popupOverlay.style.display = 'flex';
+            }
+        });
+
+        popupOverlay.addEventListener('click', function (e) {
+            if (e.target === popupOverlay) {
+                popupOverlay.style.display = 'none';
+            }
+        });
+    </script>
+
+    <!-- SCRIPT MENU -->
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const sidemenu = document.querySelector(".sidemenu");
+        const overlayMenu = document.getElementById("overlay");
+
+        function openMenu() {
+            sidemenu.classList.add("active");
+            overlayMenu.classList.add("active");
+            hamburger.classList.add("move", "short");
+        }
+
+        function closeMenu() {
+            sidemenu.classList.remove("active");
+            overlayMenu.classList.remove("active");
+            hamburger.classList.remove("move", "short");
+        }
+
+        hamburger.addEventListener("click", () => {
+            sidemenu.classList.contains("active") ? closeMenu() : openMenu();
+        });
+
+        overlayMenu.addEventListener("click", closeMenu);
+
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") closeMenu();
+        });
+
+        sidemenu.addEventListener("mouseleave", closeMenu);
+    </script>
+
+</body>
+</html>

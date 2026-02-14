@@ -1,0 +1,144 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+form textarea {
+    resize: none;
+}
+
+.form-wrapper {
+    max-width: 420px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    font-family: "Inter", sans-serif;
+}
+
+    .form-wrapper h2 {
+        margin-bottom: 20px;
+        font-weight: 600;
+        color: #333;
+        text-align: center;
+    }
+
+form label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #444;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+    form input:focus,
+    form textarea:focus {
+        border-color: #6a5acd;
+        box-shadow: 0 0 0 3px rgba(106, 90, 205, 0.2);
+        outline: none;
+    }
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: #6a5acd;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+    button:hover {
+        background: #5948c4;
+    }
+
+.paragrafo {
+    padding: 20px;
+    background: #e8e8e8;
+    font-size: 28px;
+    line-height: 1.8;
+    text-align: start;
+}
+
+.evidenziato {
+    font-size: 32px;
+    color: #6a5acd;
+}
+
+/* btnsponsor NON è un selettore valido, aggiungo il punto */
+.btnsponsor {
+    width: 100%;
+    padding: 14px;
+    background: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+    .btnsponsor:hover {
+        background: #bb0000;
+    }
+
+/* ----------------------------- */
+/*        RESPONSIVE CSS         */
+/* ----------------------------- */
+
+/* Tablet (iPad vertical) */
+@media (max-width: 1024px) {
+    .form-wrapper {
+        max-width: 90%;
+        padding: 25px;
+    }
+
+    .paragrafo {
+        font-size: 24px;
+    }
+
+    .evidenziato {
+        font-size: 28px;
+    }
+}
+
+/* Smartphone */
+@media (max-width: 600px) {
+    .form-wrapper {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    form input,
+    form textarea {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+
+    button,
+    .btnsponsor {
+        font-size: 15px;
+        padding: 12px;
+    }
+
+    .paragrafo {
+        font-size: 20px;
+        line-height: 1.6;
+    }
+
+    .evidenziato {
+        font-size: 24px;
+    }
+}

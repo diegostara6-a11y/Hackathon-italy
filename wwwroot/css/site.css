@@ -1,0 +1,559 @@
+/* Corpo principale */
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+}
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+html, body {
+    font-family: 'Exo 2', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Orbitron', sans-serif;
+}
+
+
+/* BOTTONE GENERICO */
+.btntext {
+    background: none;
+    border: none;
+    color: black;
+    text-decoration: none;
+}
+
+    .btntext:hover {
+        transform: scale(1.15);
+    }
+
+        .btn {
+            background-color: #2872fa;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+            .btn:hover {
+                background-color: #45a049;
+                transform: scale(1.05);
+            }
+        /* Side menu base */
+        .sidemenu {
+            position: fixed;
+            left: -90px;
+            top: 100px;
+            width: 90px;
+            height: 100vh;
+            background-color: #f5f5f5; /* grigio chiaro elegante */
+            padding: 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 18px;
+            box-sizing: border-box;
+            transition: left 0.3s ease;
+            font-size: 22px;
+            z-index: 1000;
+        }
+
+            .sidemenu.active {
+                left: 0;
+            }
+            /* Icone */
+            .sidemenu a {
+                position: relative;
+                width: 50px;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #2c3e50; /* grigio scuro elegante */
+                text-decoration: none;
+                border-radius: 10px;
+                transition: background-color 0.25s ease, transform 0.2s ease;
+            }
+                /* Hover icone */
+                .sidemenu a:hover {
+                    background-color: #d9d9d9; /* grigio medio chiaro */
+                    transform: translateX(6px);
+                }
+                /* Tooltip */
+                .sidemenu a::after {
+                    content: attr(data-label);
+                    position: absolute;
+                    left: 110%;
+                    top: 50%;
+                    transform: translateY(-50%) translateX(10px);
+                    white-space: nowrap;
+                    background: #4a4f57; /* grigio scuro elegante */
+                    color: white;
+                    padding: 6px 12px;
+                    border-radius: 6px;
+                    opacity: 0;
+                    pointer-events: none;
+                    transition: opacity 0.25s ease, transform 0.25s ease;
+                    font-size: 14px;
+                }
+
+                .sidemenu a:hover::after {
+                    opacity: 1;
+                    transform: translateY(-50%) translateX(0);
+                }
+        /* Versione INDEX con gradiente elegante */
+        .index-page .sidemenu {
+            background: linear-gradient( to right, rgba(245, 245, 245, 1) 0%, /* grigio quasi bianco */
+            rgba(245, 245, 245, 1) 45%, /* pieno fino a prima della metà */
+            rgba(245, 245, 245, 0.7) 65%, /* fade morbido */
+            rgba(245, 245, 245, 0.4) 80%, rgba(245, 245, 245, 0.15) 95%, /* fade leggerissimo */
+            rgba(245, 245, 245, 0) 100% /* trasparente */
+            );
+            top: 0 !important;
+            height: 100vh !important;
+            padding-top: 120px;
+        }
+        /* Hamburger menu */
+        header {
+            position: sticky;
+            background-color: black;
+            width: 100%;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center; /* logo al centro */
+            padding: 0 45px;
+            box-sizing: border-box;
+            z-index: 2000;
+            top: 0;
+        }
+            /* Hamburger a sinistra */
+            header .hamburger {
+                position: absolute;
+                left: 45px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 50px;
+                height: 40px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                cursor: pointer;
+                padding: 5px;
+                background: none;
+                border: none;
+            }
+
+        .hamburger span {
+            display: block;
+            height: 6px;
+            width: 100%;
+            background-color: #fff;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger:hover span:nth-child(1),
+        .hamburger:hover span:nth-child(3) {
+            width: 70%;
+        }
+
+        .hamburger:hover span:nth-child(2) {
+            width: 100%;
+        }
+        /* Quando il menu è aperto, l’hamburger si sposta */
+        .hamburger.move {
+            left: 135px; /* 45px originali + 90px larghezza sidemenu */
+            transition: left 0.3s ease;
+        }
+        /* Transizione anche in stato normale */
+        header .hamburger {
+            transition: left 0.3s ease;
+        }
+        /* Logo centrato */
+        header img {
+            height: 50px;
+            object-fit: contain;
+        }
+        /* Pulsante home a destra */
+        header .btn-home {
+            position: absolute;
+            right: 45px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 28px; /* dimensione icona più grande */
+            color: white;
+            transition: transform 0.2s ease;
+        }
+
+            header .btn-home:hover {
+                transform: scale(1.2);
+            }
+        /* HEADER TRASPARENTE SOLO IN INDEX */
+        .index-page header {
+            background-color: transparent !important;
+        }
+            /* Tutti gli elementi dell’header diventano bianchi */
+            .index-page header .hamburger span,
+            .index-page header .btn-home i {
+                background-color: none;
+                color: white;
+            }
+            /* Il logo resta invariato */
+            .index-page header img {
+                filter: none;
+            }
+
+        .index-page header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: transparent !important;
+            z-index: 10;
+        }
+            /* Quando scrolli, l’header torna nero */
+
+            .index-page header.scrolled {
+                background-color: black !important;
+                position: fixed; /* resta attaccato in alto */
+                top: 0;
+                left: 0;
+                z-index: 20;
+            }
+
+        /* FOOTER */
+        footer {
+            display: flex;
+            justify-content: space-between; /* distribuisce le colonne su tutta la pagina */
+            align-items: center;
+            height: 300px;
+            padding: 0 50px; /* margine laterale elegante */
+        }
+            /* Ogni colonna occupa lo stesso spazio */
+            footer > div {
+                flex: 1;
+            }
+        /* Contenuto centrato dentro ogni colonna */
+        .colonna {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center; /* centra il testo */
+            gap: 10px;
+        }
+
+        .colonna-2 {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+            /* Linea sinistra */
+            .colonna-2::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 20%;
+                height: 100%;
+                width: 1px;
+                background-color: #000;
+                border-radius: 10px;
+            }
+            /* Linea destra */
+            .colonna-2::after {
+                content: "";
+                position: absolute;
+                right: 0;
+                top: 20%;
+                height: 100%;
+                width: 1px;
+                background-color: #000;
+                border-radius: 10px;
+            }
+
+.corniceLogo {
+    width: 170px; /* riduci la dimensione del logo */
+    height: auto; /* mantiene le proporzioni */
+    object-fit: contain; /* evita distorsioni */
+}
+
+        /* Overlay per click fuori */
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: none;
+            z-index: 900;
+            transition: opacity 0.3s ease;
+        }
+
+            #overlay.active {
+                display: block;
+                opacity: 1;
+            }
+
+/* Sfondo scuro */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Popup */
+.popup {
+    background: white;
+    padding: 30px;
+    border-radius: 14px;
+    width: 420px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* Bottone rosso */
+.btnsponsor {
+    width: 100%;
+    padding: 14px;
+    background: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+    .btnsponsor:hover {
+        background: #bb0000;
+    }
+btnsponsor {
+    width: 100%;
+    padding: 14px;
+    background: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+    btnsponsor:hover {
+        background: #bb0000;
+    }
+
+form textarea {
+    resize: none;
+}
+
+
+.form-wrapper {
+    max-width: 420px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    font-family: "Inter", sans-serif;
+}
+
+    .form-wrapper h2 {
+        margin-bottom: 20px;
+        font-weight: 600;
+        color: #333;
+        text-align: center;
+    }
+
+
+form label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #444;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+    form input:focus,
+    form textarea:focus {
+        border-color: #6a5acd;
+        box-shadow: 0 0 0 3px rgba(106, 90, 205, 0.2);
+        outline: none;
+    }
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    body {
+        font-size: 15.5px;
+    }
+
+    /* HEADER */
+    header {
+        height: 90px;
+        padding: 0 30px;
+    }
+
+        header img {
+            height: 45px;
+        }
+
+        header .hamburger {
+            left: 30px;
+        }
+
+        header .btn-home {
+            right: 30px;
+            font-size: 26px;
+        }
+
+    /* SIDEMENU */
+    .sidemenu {
+        width: 80px;
+        left: -80px;
+        font-size: 20px;
+    }
+
+    .hamburger.move {
+        left: 110px;
+    }
+
+    /* FOOTER */
+    footer {
+        height: auto;
+        padding: 50px 30px;
+    }
+
+    .colonna-2::before,
+    .colonna-2::after {
+        height: 80%;
+    }
+
+    /* FORM */
+    .form-wrapper {
+        max-width: 380px;
+    }
+}
+
+    @media (max-width: 768px) {
+
+        body {
+            font-size: 15px;
+        }
+
+        /* HEADER */
+        header {
+            height: 80px;
+            padding: 0 20px;
+        }
+
+            header img {
+                height: 40px;
+            }
+
+            header .hamburger {
+                left: 20px;
+                width: 40px;
+                height: 32px;
+            }
+
+            header .btn-home {
+                right: 20px;
+                font-size: 24px;
+            }
+
+        /* SIDEMENU */
+        .sidemenu {
+            width: 100px; /* più larga su mobile */
+            left: -100px; /* nascosta correttamente */
+            font-size: 20px;
+            padding-top: 100px;
+        }
+
+            .sidemenu.active {
+                left: 0;
+            }
+
+        /* Hamburger si sposta della larghezza del sidemenu */
+        .hamburger.move {
+            left: 120px; /* 20px + 100px */
+        }
+
+        .sidemenu a {
+            width: 56px;
+            height: 56px;
+        }
+
+            /* Tooltip più compatto */
+            .sidemenu a::after {
+                font-size: 12px;
+                padding: 4px 8px;
+            }
+
+        /* FOOTER */
+        footer {
+            flex-direction: column;
+            height: auto;
+            padding: 40px 20px;
+            gap: 30px;
+        }
+
+            footer > div {
+                width: 100%;
+            }
+
+        .colonna-2::before,
+        .colonna-2::after {
+            display: none;
+        }
+
+        /* FORM */
+        .form-wrapper {
+            margin: 20px;
+            padding: 20px;
+        }
+
+        /* POPUP */
+        .popup {
+            width: 90%;
+            padding: 20px;
+        }
+    }
+
+    

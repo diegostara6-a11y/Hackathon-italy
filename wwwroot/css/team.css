@@ -1,0 +1,216 @@
+﻿/* Link brand */
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+/* Link generici */
+a {
+    color: #0077cc;
+}
+
+    a:focus,
+    a:active {
+        outline: none;
+        background: none;
+    }
+
+.team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.linea {
+    display: flex;
+    flex-direction: row; /* FOTO + TESTO AFFIANCATI */
+    align-items: center;
+    gap: 15px; /* spazio tra foto e testo */
+    width: 100%;
+    max-width: 400px;
+    margin-left: 20px;
+}
+
+.corniceteam {
+    width: 120px;
+    height: 213px; /* 9:16 */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.persona {
+    display: flex;
+    flex-direction: column;
+    align-items: center /* testo allineato a sinistra */
+}
+
+    .persona h3 {
+        margin: 0;
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .persona p {
+        margin-top: 5px;
+        font-size: 14px;
+        text-align: left;
+    }
+
+
+.corniceteam {
+    width: 200px;
+    height: 355px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Pulsante primario */
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+/* Nav pills */
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+/* Bordi */
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+/* Ombra */
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+/* Cookie policy button */
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+.paragrafo {
+    padding: 20px;
+    background: #e8e8e8;
+    font-size: 28px;
+    line-height: 1.8;
+    text-align: start;
+}
+
+.evidenziato {
+    font-size: 32px;
+    color: #6a5acd;
+}
+
+/* ----------------------------- */
+/*        RESPONSIVE CSS         */
+/* ----------------------------- */
+
+/* Tablet (iPad) */
+@media (max-width: 1024px) {
+    a.navbar-brand {
+        font-size: 18px;
+        padding: 5px 0;
+    }
+
+    .btn-primary {
+        font-size: 15px;
+        padding: 10px 14px;
+    }
+}
+
+/* Smartphone */
+@media (max-width: 600px) {
+    a.navbar-brand {
+        font-size: 16px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .team {
+        display: flex;
+        flex-direction: column; /* tutto in colonna */
+        align-items: center; /* centrato orizzontalmente */
+        gap: 35px; /* spazio tra le card */
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .linea {
+        display: flex;
+        flex-direction: column; /* foto sopra, testo sotto */
+        align-items: center; /* centrato */
+        text-align: center; /* testi centrati */
+        width: 100%;
+        max-width: 280px; /* dimensione perfetta per telefono */
+    }
+
+    .corniceteam {
+        width: 100%;
+        aspect-ratio: 9 / 16; /* formato verticale */
+        object-fit: cover; /* evita distorsioni */
+        border-radius: 10px;
+    }
+
+    .persona h3 {
+        margin-top: 12px;
+        font-size: 17px;
+        font-weight: 600;
+    }
+
+    .persona p {
+        margin-top: 5px;
+        font-size: 14px;
+        opacity: 0.9;
+    }
+
+
+    .corniceteam {
+        width: 100%; /* occupa tutta la larghezza del contenitore */
+        max-width: 140px; /* dimensione massima su schermi piccoli */
+        aspect-ratio: 9 / 16; /* mantiene il formato verticale */
+        object-fit: cover; /* evita distorsioni */
+        border-radius: 10px; /* estetica */
+        display: block;
+    }
+
+    .nav-pills .nav-link {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .btn-primary {
+        width: 100%;
+        font-size: 15px;
+        padding: 12px;
+    }
+
+    button.accept-policy {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .paragrafo {
+        font-size: 20px;
+        line-height: 1.6;
+    }
+
+    .evidenziato {
+        font-size: 24px;
+    }
+}

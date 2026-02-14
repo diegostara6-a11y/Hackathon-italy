@@ -1,0 +1,47 @@
+﻿@page
+@model Hackathon_Bologna.Views.Home.feedbackModel
+@{
+}
+
+<head>
+    <title>Feedback</title>
+    <link href="~/css/feedback.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div style="margin-top:20px;"></div>
+    <div style="display:flex;align-items:center;margin: 0 50px;">
+        <div style="flex:1;border-bottom:3px solid #000;border-radius: 10px;"></div>
+        <span style="margin:0 15px; font-size: 24px;">FREQUENTLY ASKED QUESTIONS</span>
+        <div style="flex:1;border-bottom:3px solid #000;border-radius: 10px;"></div>
+    </div>
+
+    <h3 class="paragrafo">
+        Il nostro team è sempre pronto ad ascoltare le vostre opinioni e a migliorare costantemente. 
+        Se avete feedback, suggerimenti o domande, non esitate a contattarci! Siamo qui per voi e vogliamo assicurarci
+        che la vostra esperienza con noi sia sempre positiva. Potete inviarci un'email, compilare il form di contatto 
+        o semplicemente raggiungerci sui nostri canali social. La vostra voce è importante per noi e ci aiuta a 
+        crescere e a offrire un servizio sempre migliore. Grazie per essere parte della nostra community!
+    </h3>
+
+    <div style="margin-top:20px;"></div>
+    <div style="display:flex;align-items:center;margin: 0 50px;">
+        <div style="flex:1;border-bottom:3px solid #000;border-radius: 10px;"></div>
+        <div style="flex:1;border-bottom:3px solid #000;border-radius: 10px;"></div>
+    </div>
+
+    <div style="margin-top:50px;"></div>
+
+    <div class="form-wrapper">
+        <form asp-controller="Home" asp-action="InviaMessaggio" method="post">
+            <label for="email">Evento in questione</label>
+            <input type="email" id="email" name="Email" required placeholder="Puoi anche dare un feedback sul sito" />
+
+            <label for="messaggio">Messaggio</label>
+            <textarea id="messaggio" name="Messaggio" rows="5" required></textarea>
+
+            <button type="submit">Invia</button>
+        </form>
+    </div>
+
+</body>
