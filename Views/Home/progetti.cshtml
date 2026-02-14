@@ -1,53 +1,51 @@
-﻿
-@model Hackathon_Bologna.Views.Home.progettiModel
-@{
-}
-
-
-
+<!DOCTYPE html>
+<html lang="it">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Progetti</title>
-    <link href="~/css/progetti.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progetti - Hackathon</title>
+    <link href="css/progetti.css" rel="stylesheet" />
 </head>
-
 <body>
 
-    <div style="margin-top:20px;"></div>
-    <div style="display:flex;align-items:center;margin: 0 50px;">
-        <div style="flex:1;border-bottom:3px solid #000;border-radius: 10px;"></div>
-        <span style="margin:0 15px; font-size: 24px;">PROGETTI</span>
-        <div style="flex:1;border-bottom:3px solid #000;border-radius: 10px;"></div>
-    </div>
+<div style="margin-top:20px;"></div>
+<div style="display:flex;align-items:center;margin: 0 50px;">
+    <div style="flex:1;border-bottom:3px solid #000;border-radius: 10px;"></div>
+    <span style="margin:0 15px; font-size: 24px;">PROGETTI</span>
+    <div style="flex:1;border-bottom:3px solid #000;border-radius: 10px;"></div>
+</div>
 
-    <div class="progetto">
-        <a href="@Url.Action("contatti", "Home")">
-        <div class="lineaprogetto1">
-            <img src="/img/progtto1.png" class="cornice" />
+<div class="progetto" style="margin:50px 50px;">
+    <a href="contatti.html" style="text-decoration:none; color:inherit;">
+        <div class="lineaprogetto1" style="display:flex; gap:20px; align-items:flex-start;">
+            <img src="img/progtto1.png" class="cornice" style="width:300px; border-radius:10px;" />
 
-            <div class="testo-progetto">
-            <h2>Progetto 1</h2>
-                    <p>
-                        April’s Fool Hackathon è un’iniziativa totalmente gratuita pensata per valorizzare creatività, ingegno e spirito innovativo in un contesto competitivo ma leggero.
-                        I partecipanti sono invitati a sviluppare, tramite programmazione, un gioco o un’esperienza digitale dal carattere sorprendente.
-                        L’obiettivo principale è realizzare uno scherzo tecnologico capace di stupire la giuria in modo elegante e inaspettato.
-                        La sfida richiede non solo competenze tecniche, ma anche capacità di immaginazione e originalità.
-                        Ogni progetto dovrà distinguersi per inventiva, qualità dell’esecuzione e impatto finale.
-                        Sono incoraggiati approcci non convenzionali, soluzioni creative e idee che sappiano ribaltare le aspettative.
-                        Il contesto dell’hackathon favorisce collaborazione, sperimentazione e un uso intelligente dell’umorismo.
-                        Il codice diventa strumento per creare sorpresa e coinvolgimento.
-                        La giuria valuterà la coerenza del concept, l’effetto sorpresa e la qualità complessiva del risultato.
-                        Vincerà il team che saprà trasformare un semplice scherzo in un’esperienza memorabile e tecnicamente raffinata.
-                        April's Fool hackathon si terrà a Bologna dall' 1 al 3 aprile 2026. 
-                        Tutte le informazioni logistiche, e riguardo alla location verranno inviate per email in seguito a iscrizione.
-                    </p>
-                </div>
+            <div class="testo-progetto" style="max-width:800px;">
+                <h2>Progetto 1</h2>
+                <p>
+                    April’s Fool Hackathon è un’iniziativa totalmente gratuita pensata per valorizzare creatività, ingegno e spirito innovativo in un contesto competitivo ma leggero.
+                    I partecipanti sono invitati a sviluppare, tramite programmazione, un gioco o un’esperienza digitale dal carattere sorprendente.
+                    L’obiettivo principale è realizzare uno scherzo tecnologico capace di stupire la giuria in modo elegante e inaspettato.
+                    La sfida richiede non solo competenze tecniche, ma anche capacità di immaginazione e originalità.
+                    Ogni progetto dovrà distinguersi per inventiva, qualità dell’esecuzione e impatto finale.
+                    Sono incoraggiati approcci non convenzionali, soluzioni creative e idee che sappiano ribaltare le aspettative.
+                    Il contesto dell’hackathon favorisce collaborazione, sperimentazione e un uso intelligente dell’umorismo.
+                    Il codice diventa strumento per creare sorpresa e coinvolgimento.
+                    La giuria valuterà la coerenza del concept, l’effetto sorpresa e la qualità complessiva del risultato.
+                    Vincerà il team che saprà trasformare un semplice scherzo in un’esperienza memorabile e tecnicamente raffinata.
+                    April's Fool hackathon si terrà a Bologna dall' 1 al 3 aprile 2026. 
+                    Tutte le informazioni logistiche e riguardo alla location verranno inviate per email in seguito all'iscrizione.
+                </p>
+            </div>
         </div>
-        </a>
+    </a>
+</div>
 
-       
+<div style="margin:50px;text-align:center;">
+    <h1>NEW PROJECTS SOON</h1>
+</div>
 
-        <h1>NEW PROJECTS SOON</h1>
-    </div>
+<p style="margin-left:50px;"><a href="index.html">Torna alla Home</a></p>
+
 </body>
+</html>
