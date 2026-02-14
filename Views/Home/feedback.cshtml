@@ -1,47 +1,42 @@
-﻿@page
-@model Hackathon_Bologna.Views.Home.feedbackModel
-@{
-}
-
+<!DOCTYPE html>
+<html lang="it">
 <head>
-    <title>Feedback</title>
-    <link href="~/css/feedback.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <title>Feedback - Hackathon</title>
+    <link href="css/feedback.css" rel="stylesheet" />
 </head>
-
 <body>
-    <div style="margin-top:20px;"></div>
-    <div style="display:flex;align-items:center;margin: 0 50px;">
-        <div style="flex:1;border-bottom:3px solid #000;border-radius: 10px;"></div>
-        <span style="margin:0 15px; font-size: 24px;">FREQUENTLY ASKED QUESTIONS</span>
-        <div style="flex:1;border-bottom:3px solid #000;border-radius: 10px;"></div>
-    </div>
 
-    <h3 class="paragrafo">
-        Il nostro team è sempre pronto ad ascoltare le vostre opinioni e a migliorare costantemente. 
-        Se avete feedback, suggerimenti o domande, non esitate a contattarci! Siamo qui per voi e vogliamo assicurarci
-        che la vostra esperienza con noi sia sempre positiva. Potete inviarci un'email, compilare il form di contatto 
-        o semplicemente raggiungerci sui nostri canali social. La vostra voce è importante per noi e ci aiuta a 
-        crescere e a offrire un servizio sempre migliore. Grazie per essere parte della nostra community!
-    </h3>
+<div style="margin-top:20px;"></div>
+<div style="display:flex;align-items:center;margin: 0 50px;">
+    <div style="flex:1;border-bottom:3px solid #000;border-radius: 10px;"></div>
+    <span style="margin:0 15px; font-size: 24px;">FEEDBACK</span>
+    <div style="flex:1;border-bottom:3px solid #000;border-radius: 10px;"></div>
+</div>
 
-    <div style="margin-top:20px;"></div>
-    <div style="display:flex;align-items:center;margin: 0 50px;">
-        <div style="flex:1;border-bottom:3px solid #000;border-radius: 10px;"></div>
-        <div style="flex:1;border-bottom:3px solid #000;border-radius: 10px;"></div>
-    </div>
+<h3 class="paragrafo" style="margin:50px 50px 20px 50px;">
+    Il nostro team è sempre pronto ad ascoltare le vostre opinioni e a migliorare costantemente. 
+    Se avete feedback, suggerimenti o domande, non esitate a contattarci! Siamo qui per voi e vogliamo assicurarci
+    che la vostra esperienza con noi sia sempre positiva. Potete inviarci un'email, compilare il form di contatto 
+    o semplicemente raggiungerci sui nostri canali social. La vostra voce è importante per noi e ci aiuta a 
+    crescere e a offrire un servizio sempre migliore. Grazie per essere parte della nostra community!
+</h3>
 
-    <div style="margin-top:50px;"></div>
+<div style="margin-top:50px;"></div>
 
-    <div class="form-wrapper">
-        <form asp-controller="Home" asp-action="InviaMessaggio" method="post">
-            <label for="email">Evento in questione</label>
-            <input type="email" id="email" name="Email" required placeholder="Puoi anche dare un feedback sul sito" />
+<div class="form-wrapper" style="margin:0 50px;">
+    <form action="#" method="post">
+        <label for="evento">Evento in questione</label>
+        <input type="text" id="evento" name="Evento" placeholder="Puoi anche dare un feedback sul sito" required />
 
-            <label for="messaggio">Messaggio</label>
-            <textarea id="messaggio" name="Messaggio" rows="5" required></textarea>
+        <label for="messaggio">Messaggio</label>
+        <textarea id="messaggio" name="Messaggio" rows="5" required placeholder="Scrivi qui il tuo feedback"></textarea>
 
-            <button type="submit">Invia</button>
-        </form>
-    </div>
+        <button type="submit">Invia</button>
+    </form>
+</div>
+
+<p style="margin-top:30px; margin-left:50px;"><a href="index.html">Torna alla Home</a></p>
 
 </body>
+</html>
