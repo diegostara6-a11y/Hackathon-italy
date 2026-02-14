@@ -11,18 +11,16 @@
 <div style="margin-top:40px;"></div>
 
 <h3 class="paragrafo">
-    Il nostro team nasce dall’unione di competenze diverse e dalla voglia condivisa di creare qualcosa
-    che lasci il segno. Ognuno porta con sé un bagaglio unico fatto di
-    <span class="evidenziato">ESPERIENZE, IDEE e PROSPETTIVE</span>
-    che, messe insieme, diventano la nostra forza più grande. Lavoriamo con
-    <span class="evidenziato">PASSIONE, CURIOSITÀ e SPIRITO DI COLLABORAZIONE</span>,
-    affrontando ogni sfida come un’opportunità per crescere. Crediamo nell’
-    <span class="evidenziato">INNOVAZIONE, nella CREATIVITÀ</span> e nel valore delle persone che rendono possibile ogni
-    progetto. Siamo un gruppo affiatato, determinato e sempre pronto a migliorarsi.
+    Il nostro team nasce dall’unione di competenze diverse e dalla voglia condivisa di creare qualcosa che lasci il segno.
+    Ognuno porta con sé un bagaglio unico fatto di <span class="evidenziato">ESPERIENZE, IDEE e PROSPETTIVE</span> 
+    che, messe insieme, diventano la nostra forza più grande. Lavoriamo con 
+    <span class="evidenziato">PASSIONE, CURIOSITÀ e SPIRITO DI COLLABORAZIONE</span>, 
+    affrontando ogni sfida come un’opportunità per crescere. Crediamo nell’ 
+    <span class="evidenziato">INNOVAZIONE, nella CREATIVITÀ</span> e nel valore delle persone che rendono possibile ogni progetto.
+    Siamo un gruppo affiatato, determinato e sempre pronto a migliorarsi.
 </h3>
 
 <div style="margin-top:20px;"></div>
-
 <div style="display:flex;align-items:center;margin: 0 50px;">
     <div style="flex:1;border-bottom:3px solid #000;border-radius: 10px;"></div>
     <span style="margin:0 15px; font-size: 24px;">SCRIVICI UNA MAIL COMPILANDO IL FORM</span>
@@ -31,8 +29,6 @@
 
 <div class="form-wrapper">
     <h2>Contattaci</h2>
-
-    <!-- Form statico: action vuota perché GitHub Pages non può elaborarlo -->
     <form action="#" method="post">
         <label for="nome">Nome</label>
         <input type="text" id="nome" name="Nome" required>
@@ -51,9 +47,71 @@
 </div>
 
 <div style="margin-top:50px;"></div>
+<div style="display:flex;align-items:center;margin: 0 50px;">
+    <div style="flex:1;border-bottom:3px solid #000;border-radius: 10px;"></div>
+    <span style="margin:0 15px; font-size: 24px;">ISCRIVITI A UN NOSTRO PROGETTO</span>
+    <div style="flex:1;border-bottom:3px solid #000;border-radius: 10px;"></div>
+</div>
 
-<!-- Se vuoi, puoi duplicare altri form nello stesso modo -->
-<p><a href="index.html">Torna alla Home</a></p>
+<div class="form-wrapper">
+    <h2>Iscrizione Progetto</h2>
+    <form action="#" method="post">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="Nome" required>
+
+        <label for="cognome">Cognome</label>
+        <input type="text" id="cognome" name="Cognome" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="Email" required>
+
+        <label for="team">Team</label>
+        <input type="text" id="team" name="Team" required>
+
+        <label for="progetto">Progetto</label>
+        <input type="text" id="progetto" name="Progetto" required placeholder="es. April's fool Hackathon">
+
+        <label for="necessità">Necessità</label>
+        <textarea id="necessità" name="necessità" rows="5" required placeholder="Specifica le varie necessità (librerie, oggetti ecc.)"></textarea>
+
+        <button type="submit">Invia</button>
+    </form>
+</div>
+
+<div style="margin-top:50px;"></div>
+<div style="display:flex;align-items:center;margin: 0 50px;">
+    <div style="flex:1;border-bottom:3px solid #000;border-radius: 10px;"></div>
+    <span style="margin:0 15px; font-size: 24px;">PER LE COLLABORAZIONI</span>
+    <div style="flex:1;border-bottom:3px solid #000;border-radius: 10px;"></div>
+</div>
+
+<div class="form-wrapper">
+    <h2>Collaborazioni</h2>
+    <form action="#" method="post">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="Nome" required placeholder="Il tuo nome">
+
+        <label for="cognome">Cognome</label>
+        <input type="text" id="cognome" name="Cognome" required placeholder="Il tuo cognome">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="Email" required placeholder="La tua email di contatto">
+
+        <label for="azienda">Azienda / Ente</label>
+        <input type="text" id="azienda" name="Team" required placeholder="Nome dell'azienda o organizzazione">
+
+        <label for="tipo">Tipo di collaborazione</label>
+        <input type="text" id="tipo" name="Progetto" required placeholder="Es. supporto economico, materiali, servizi...">
+
+        <label for="proposta">Proposta di collaborazione</label>
+        <textarea id="proposta" name="necessità" rows="5" required placeholder="Descrivi la tua proposta e cosa vorresti sponsorizzare"></textarea>
+
+        <button type="submit" class="btnsponsor">Invia</button>
+    </form>
+</div>
+
+<p style="margin-top:50px;"><a href="index.html">Torna alla Home</a></p>
 
 </body>
 </html>
+
