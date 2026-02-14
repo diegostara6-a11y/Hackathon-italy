@@ -1,183 +1,185 @@
-﻿@model Hackathon_Bologna.Views.Home.faqModel
-@{
-}
-
+<!DOCTYPE html>
+<html lang="it">
 <head>
-    <link href="~/css/faq.css" rel="stylesheet" />
-    <link href="~/css/contatti.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <title>FAQ - Hackathon</title>
+    <link href="css/faq.css" rel="stylesheet" />
+    <link href="css/contatti.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
 
-    <div style="margin-top:20px;"></div>
-    <div style="display:flex;align-items:center;margin: 0 50px;">
-        <div style="flex:1;border-bottom:3px solid #000;border-radius: 10px;"></div>
-        <span style="margin:0 15px; font-size: 24px;">FREQUENTLY ASKED QUESTIONS</span>
-        <div style="flex:1;border-bottom:3px solid #000;border-radius: 10px;"></div>
+<div style="margin-top:20px;"></div>
+<div style="display:flex;align-items:center;margin: 0 50px;">
+    <div style="flex:1;border-bottom:3px solid #000;border-radius: 10px;"></div>
+    <span style="margin:0 15px; font-size: 24px;">FREQUENTLY ASKED QUESTIONS</span>
+    <div style="flex:1;border-bottom:3px solid #000;border-radius: 10px;"></div>
+</div>
+
+<div class="faqbox">
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <i class="fas fa-question-circle icon"></i>
+            <h3>COS’È UN HACKATHON?</h3>
+        </div>
+        <div class="faq-answer">
+            <p>Un hackathon è un evento in cui persone con competenze diverse collaborano per creare un progetto in un tempo limitato, solitamente 24–48 ore.</p>
+        </div>
     </div>
 
-    <div class="faqbox">
-
-        <div class="faq-item">
-            <div class="faq-question">
-                <i class="fas fa-question-circle icon"></i>
-                <h3>COS’È UN HACKATHON?</h3>
-            </div>
-            <div class="faq-answer">
-                <p>Un hackathon è un evento in cui persone con competenze diverse collaborano per creare un progetto in un tempo limitato, solitamente 24–48 ore.</p>
-            </div>
+    <div class="faq-item">
+        <div class="faq-question">
+            <i class="fas fa-question-circle icon"></i>
+            <h3>CHI PUÒ PARTECIPARE?</h3>
         </div>
-
-        <div class="faq-item">
-            <div class="faq-question">
-                <i class="fas fa-question-circle icon"></i>
-                <h3>CHI PUÒ PARTECIPARE?</h3>
-            </div>
-            <div class="faq-answer">
-                <p>L’hackathon è aperto a studenti, professionisti, appassionati di tecnologia e creativi di ogni livello, con un'età minima di 16 anni'.</p>
-            </div>
+        <div class="faq-answer">
+            <p>L’hackathon è aperto a studenti, professionisti, appassionati di tecnologia e creativi di ogni livello, con un'età minima di 16 anni.</p>
         </div>
-
-        <div class="faq-item">
-            <div class="faq-question">
-                <i class="fas fa-question-circle icon"></i>
-                <h3>SERVE AVERE UN TEAM GIÀ FORMATO?</h3>
-            </div>
-            <div class="faq-answer">
-                <p>No. Puoi partecipare da solo e formare un team all’inizio dell’evento, oppure unirti a un gruppo esistente.</p>
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">
-                <i class="fas fa-question-circle icon"></i>
-                <h3>QUALI COMPETENZE SERVONO?</h3>
-            </div>
-            <div class="faq-answer">
-                <p>Non è necessario essere programmatori. Sono utili anche competenze in design, comunicazione, project management, marketing e creatività.</p>
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">
-                <i class="fas fa-question-circle icon"></i>
-                <h3>DEVO PORTARE IL MIO COMPUTER?</h3>
-            </div>
-            <div class="faq-answer">
-                <p>La lista degli oggetti necessari per ogni evento è fornita nell'appostita sezione.</p>
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">
-                <i class="fas fa-question-circle icon"></i>
-                <h3>CI SONO PREMI?</h3>
-            </div>
-            <div class="faq-answer">
-                <p>Sì, una giuria premierà i progetti migliori con numerosi premi.</p>
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">
-                <i class="fas fa-question-circle icon"></i>
-                <h3>COME AVVIENE LA VALUTAZIONE DEI PROGETTI?</h3>
-            </div>
-            <div class="faq-answer">
-                <p>I progetti vengono valutati in base a innovazione, utilità, design, presentazione e coerenza con la richiesta iniziale.</p>
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">
-                <i class="fas fa-question-circle icon"></i>
-                <h3>È NECESSARIO REGISTRARSI?</h3>
-            </div>
-            <div class="faq-answer">
-                <p>Sì, è richiesta la registrazione tramite il form presente sul sito.</p>
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">
-                <i class="fas fa-question-circle icon"></i>
-                <h3>È PREVISTO CIBO DURANTE L’EVENTO?</h3>
-            </div>
-            <div class="faq-answer">
-                <p>Di solito sì: snack, acqua e pasti principali, ma dipende dall’evento in particolare.</p>
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">
-                <i class="fas fa-question-circle icon"></i>
-                <h3>POSSO ANDARE VIA E TORNARE?</h3>
-            </div>
-            <div class="faq-answer">
-                <p>Sì, non è obbligatorio rimanere per tutta la durata dell’evento.</p>
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">
-                <i class="fas fa-question-circle icon"></i>
-                <h3>COSA SUCCEDE AI PROGETTI DOPO L’HACKATHON?</h3>
-            </div>
-            <div class="faq-answer">
-                <p>I partecipanti mantengono la proprietà delle loro idee. L’organizzazione può offrire supporto o mentorship per sviluppare i progetti più promettenti.</p>
-            </div>
-        </div>
-
     </div>
 
-    <div style="margin-top:20px;"></div>
-    <div style="display:flex;align-items:center;margin: 0 50px;">
-        <div style="flex:1;border-bottom:3px solid #000;border-radius: 10px;"></div>
-        <span style="margin:0 15px; font-size: 24px;">SE AVESSI DUBBI NON ESITARE A CONTATTARCI</span>
-        <div style="flex:1;border-bottom:3px solid #000;border-radius: 10px;"></div>
+    <div class="faq-item">
+        <div class="faq-question">
+            <i class="fas fa-question-circle icon"></i>
+            <h3>SERVE AVERE UN TEAM GIÀ FORMATO?</h3>
+        </div>
+        <div class="faq-answer">
+            <p>No. Puoi partecipare da solo e formare un team all’inizio dell’evento, oppure unirti a un gruppo esistente.</p>
+        </div>
     </div>
 
-    <div class="form-wrapper">
-        <h2>Contattaci</h2>
-
-        <form asp-controller="Home" asp-action="InviaMessaggio" method="post">
-            <label for="nome">Nome</label>
-            <input type="text" id="nome" name="Nome" required>
-
-            <label for="cognome">Cognome</label>
-            <input type="text" id="cognome" name="Cognome" required>
-
-            <label for="email">Email</label>
-            <input type="email" id="email" name="Email" required>
-
-            <label for="messaggio">Messaggio</label>
-            <textarea id="messaggio" name="Messaggio" rows="5" required></textarea>
-
-            <button type="submit">Invia</button>
-        </form>
+    <div class="faq-item">
+        <div class="faq-question">
+            <i class="fas fa-question-circle icon"></i>
+            <h3>QUALI COMPETENZE SERVONO?</h3>
+        </div>
+        <div class="faq-answer">
+            <p>Non è necessario essere programmatori. Sono utili anche competenze in design, comunicazione, project management, marketing e creatività.</p>
+        </div>
     </div>
 
-    <script>
-        const faqs = document.querySelectorAll(".faq-item");
+    <div class="faq-item">
+        <div class="faq-question">
+            <i class="fas fa-question-circle icon"></i>
+            <h3>DEVO PORTARE IL MIO COMPUTER?</h3>
+        </div>
+        <div class="faq-answer">
+            <p>La lista degli oggetti necessari per ogni evento è fornita nell'apposita sezione.</p>
+        </div>
+    </div>
 
-        faqs.forEach(faq => {
-            const answer = faq.querySelector(".faq-answer");
-            const icon = faq.querySelector(".icon");
+    <div class="faq-item">
+        <div class="faq-question">
+            <i class="fas fa-question-circle icon"></i>
+            <h3>CI SONO PREMI?</h3>
+        </div>
+        <div class="faq-answer">
+            <p>Sì, una giuria premierà i progetti migliori con numerosi premi.</p>
+        </div>
+    </div>
 
-            faq.addEventListener("click", () => {
+    <div class="faq-item">
+        <div class="faq-question">
+            <i class="fas fa-question-circle icon"></i>
+            <h3>COME AVVIENE LA VALUTAZIONE DEI PROGETTI?</h3>
+        </div>
+        <div class="faq-answer">
+            <p>I progetti vengono valutati in base a innovazione, utilità, design, presentazione e coerenza con la richiesta iniziale.</p>
+        </div>
+    </div>
 
-                if (answer.style.maxHeight) {
-                    answer.style.maxHeight = null;
-                    faq.classList.remove("open");
-                    icon.classList.remove("fa-exclamation-circle");
-                    icon.classList.add("fa-question-circle");
-                } else {
-                    answer.style.maxHeight = answer.scrollHeight + "px";
-                    faq.classList.add("open");
-                    icon.classList.remove("fa-question-circle");
-                    icon.classList.add("fa-exclamation-circle");
-                }
-            });
+    <div class="faq-item">
+        <div class="faq-question">
+            <i class="fas fa-question-circle icon"></i>
+            <h3>È NECESSARIO REGISTRARSI?</h3>
+        </div>
+        <div class="faq-answer">
+            <p>Sì, è richiesta la registrazione tramite il form presente sul sito.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <i class="fas fa-question-circle icon"></i>
+            <h3>È PREVISTO CIBO DURANTE L’EVENTO?</h3>
+        </div>
+        <div class="faq-answer">
+            <p>Di solito sì: snack, acqua e pasti principali, ma dipende dall’evento in particolare.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <i class="fas fa-question-circle icon"></i>
+            <h3>POSSO ANDARE VIA E TORNARE?</h3>
+        </div>
+        <div class="faq-answer">
+            <p>Sì, non è obbligatorio rimanere per tutta la durata dell’evento.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <i class="fas fa-question-circle icon"></i>
+            <h3>COSA SUCCEDE AI PROGETTI DOPO L’HACKATHON?</h3>
+        </div>
+        <div class="faq-answer">
+            <p>I partecipanti mantengono la proprietà delle loro idee. L’organizzazione può offrire supporto o mentorship per sviluppare i progetti più promettenti.</p>
+        </div>
+    </div>
+
+</div>
+
+<div style="margin-top:20px;"></div>
+<div style="display:flex;align-items:center;margin: 0 50px;">
+    <div style="flex:1;border-bottom:3px solid #000;border-radius: 10px;"></div>
+    <span style="margin:0 15px; font-size: 24px;">SE AVESSI DUBBI NON ESITARE A CONTATTARCI</span>
+    <div style="flex:1;border-bottom:3px solid #000;border-radius: 10px;"></div>
+</div>
+
+<div class="form-wrapper">
+    <h2>Contattaci</h2>
+    <form action="#" method="post">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="Nome" required>
+
+        <label for="cognome">Cognome</label>
+        <input type="text" id="cognome" name="Cognome" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="Email" required>
+
+        <label for="messaggio">Messaggio</label>
+        <textarea id="messaggio" name="Messaggio" rows="5" required></textarea>
+
+        <button type="submit">Invia</button>
+    </form>
+</div>
+
+<script>
+    const faqs = document.querySelectorAll(".faq-item");
+    faqs.forEach(faq => {
+        const answer = faq.querySelector(".faq-answer");
+        const icon = faq.querySelector(".icon");
+
+        faq.addEventListener("click", () => {
+            if (answer.style.maxHeight) {
+                answer.style.maxHeight = null;
+                faq.classList.remove("open");
+                icon.classList.remove("fa-exclamation-circle");
+                icon.classList.add("fa-question-circle");
+            } else {
+                answer.style.maxHeight = answer.scrollHeight + "px";
+                faq.classList.add("open");
+                icon.classList.remove("fa-question-circle");
+                icon.classList.add("fa-exclamation-circle");
+            }
         });
-    </script>
+    });
+</script>
+
+<p style="margin-top:30px;"><a href="index.html">Torna alla Home</a></p>
+
 </body>
+</html>
+
